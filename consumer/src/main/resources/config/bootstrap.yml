@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: retail
+  cloud:
+    config:
+      uri: "http://docker:8888"
+      label: kafka-avro
