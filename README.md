@@ -3,4 +3,4 @@
 The relevant classes to look at are:
 
   * `EventProducer`
-  * `EventConsumer`
+  * `EventProcessor`

@@ -1,7 +1,5 @@
 package com.example.consumer;
 
-import java.io.IOException;
-import java.util.Arrays;
 import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +12,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.SimpleCommandLinePropertySource;
+
+import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * Application to consume from Kafka.
@@ -30,7 +31,7 @@ public class ConsumerApplication {
     private Environment env;
 
     @Autowired
-    private EventConsumer eventConsumer;
+    private EventProcessor eventProcessor;
 
     /**
      * Initializes the micro-service
@@ -49,7 +50,7 @@ public class ConsumerApplication {
             LOGGER.info("Running with Spring profile(s) : {}", Arrays.toString(env.getActiveProfiles()));
         }
 
-        eventConsumer.run();
+        eventProcessor.start();
     }
 
     /**
