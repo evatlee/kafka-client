@@ -3,5 +3,5 @@ spring:
     name: retail
   cloud:
     config:
-      uri: "http://docker:8888"
-      label: kafka-avro
+      uri: ${config.server.uri:http://${HOST:config.ci.prod.auction.local}:8888}
+      label: backend

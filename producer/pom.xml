@@ -25,5 +25,11 @@
             <artifactId>kafka-client-common</artifactId>
             <version>0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.tenx.ms</groupId>
+            <artifactId>ssp-ms-lm</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <classifier>api</classifier>
+        </dependency>
     </dependencies>
 </project>
